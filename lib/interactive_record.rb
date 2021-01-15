@@ -67,7 +67,7 @@ class InteractiveRecord
   end
   
   def self.find_by(attribute)
-    binding.pry
+    # binding.pry
     attribute.map do |key, value|
       DB[:conn].execute("SELECT * FROM #{self.table_name} WHERE #{key.to_s} = ?", value)
     end[0][0]
