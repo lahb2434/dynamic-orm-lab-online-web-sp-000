@@ -68,7 +68,7 @@ class InteractiveRecord
   
   def self.find_by(attribute)
     binding.pry
-    
+    attribute.map do |key, value|
     
   end
   
