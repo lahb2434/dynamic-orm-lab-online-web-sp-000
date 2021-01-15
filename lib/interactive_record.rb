@@ -70,7 +70,7 @@ class InteractiveRecord
     binding.pry
     attribute.map do |key, value|
       DB[:conn].execute("SELECT * FROM #{self.table_name} WHERE #{key.to_s} = ?", value)
-    end
+    end[0][0]
   end
   
     
